@@ -11,6 +11,8 @@ import { defineComponent } from "vue";
 import Item from "./Item.vue";
 // 引入axios
 import axios from 'axios';
+// 引入接口
+import { Todo } from '../types/todo.ts'
 export default defineComponent({
     name: 'List',
     components: {
@@ -20,7 +22,7 @@ export default defineComponent({
     props: {
         todos: {
             //type:Object as () => Todo, // 函数返回的是Todo类型
-            type: Array,
+            type: Array as () => Todo[],
             required: true,
             default: () => ({})
         },

@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    // 设置基本URL为当前目录，用于解析非相对模块名
+    "baseUrl": ".",
+    // 路径映射，允许将导入路径映射到特定位置
+    "paths": {
+      "src/*": ["src/*"] // 将 "src/*" 映射到项目中的 "src" 目录
+    },
+    // 允许导入 .ts 和 .tsx 文件，而无需指定文件扩展名
+    "allowImportingTsExtensions": true,
+    // 不生成输出文件（如 .js 文件），通常用于使用其他工具（如 Babel）进行转译
+    "noEmit": true
+  }
+}
+
+/*
+这段代码是一个 TypeScript 配置文件 (tsconfig.json)。它定义了 TypeScript 编译器的选项：
+
+1. baseUrl: "." 
+   设置基本URL为当前目录，用于解析非相对模块名。
+
+2. paths: { "src/*": ["src/*"] }
+   定义路径映射，允许将导入路径映射到特定位置。这里将 "src/*" 映射到项目中的 "src" 目录。
+
+3. allowImportingTsExtensions: true
+   允许在导入语句中使用 .ts 和 .tsx 文件扩展名，而无需显式指定。
+
+4. noEmit: true
+   指示编译器不要生成输出文件（如 .js 文件）。这通常用于当项目使用其他工具（如 Babel）进行实际的代码转译时。
+
+这些设置有助于优化 TypeScript 项目的模块解析和编译行为，使开发过程更加灵活和高效。
+*/
